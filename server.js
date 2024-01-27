@@ -8,4 +8,7 @@ app.listen(port,()=>{
     console.log(`server is running at a port ${port}`);
 })
 
+app.use(express.json());
 app.use('/api/users',require("./routes/userRoutes"));
+app.use('/api/contacts',require("./routes/contactRoutes"));
+
